@@ -1,0 +1,11 @@
+Model Information:
+* title:	UFO - terrarium
+* source:	https://sketchfab.com/3d-models/ufo-terrarium-7a78a809c6b9470faee65936c72f4a4e
+* author:	Adan (https://sketchfab.com/Apdigivid.)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "UFO - terrarium" (https://sketchfab.com/3d-models/ufo-terrarium-7a78a809c6b9470faee65936c72f4a4e) by Adan (https://sketchfab.com/Apdigivid.) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
