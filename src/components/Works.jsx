@@ -17,22 +17,30 @@ const ProjectCard = ({ index, name, description, tags, image, source_code_link }
           scale: 1,
           speed: 40
         }}
-        className="bg-tertiary p-5 rounded-2x1 sm:w-[360px] w-full"
+        className="bg-tertiary p-5 rounded-2x1 sm:w-[360px] w-full h-full flex flex-col justify-between"
       >
         <div className='relative w-full h-[230px]'>
-          <img
-            src={image}
-            alt={name}
-            className="w-full h-full object-cover rounded-2x1"
-          />
-          <div className='absolute inset-0 flex justify-end m-3 card-img_hover'>
-            <div onClick={() => window.open(source_code_link, "_blank")}
-              className="black-gradient w-10 h-10 rounded-full flex justify-center
-          items-center cursor-pointer">
-              <img src={github} alt="Github" />
-
+          {image ? (
+            <img
+              src={image}
+              alt={name}
+              className="w-full h-full object-cover rounded-2x1"
+            />
+          ) : (
+            <div className="w-full h-full bg-gradient-to-br from-gray-900 to-gray-800 rounded-2xl flex items-center justify-center border border-gray-700">
+              <span className="text-gray-500 font-mono text-xl">{name.charAt(0)}</span>
             </div>
-          </div>
+          )}
+
+          {source_code_link && (
+            <div className='absolute inset-0 flex justify-end m-3 card-img_hover'>
+              <div onClick={() => window.open(source_code_link, "_blank")}
+                className="black-gradient w-10 h-10 rounded-full flex justify-center
+            items-center cursor-pointer">
+                <img src={github} alt="Github" />
+              </div>
+            </div>
+          )}
         </div>
         <div className='mt-5'>
           <h3 className='text-white font-bold text-[24px]'>{name}</h3>
@@ -54,16 +62,17 @@ const Works = () => {
   return (
     <>
       <motion.div variants={textVariant()}>
-        <p className={styles.sectionSubText}>My Work</p>
-        <h2 className={styles.sectionHeadText}>Projects.</h2>
+        <p className={styles.sectionSubText}>Mi Trabajo</p>
+        <h2 className={styles.sectionHeadText}>Proyectos Clave.</h2>
       </motion.div>
       <div className='w-full flex'>
         <motion.p
           variants={fadeIn("", "", 0.1, 1)}
           className="mt-3 text-secondary text-[17px] max-w-3x1 leading-[30px]"
         >
-          These are some of my projects carried out during the period of study and professional practice.
-
+          Estos proyectos demuestran mis habilidades en situaciones del mundo real.
+          Cada uno es un desafío técnico que requirió soluciones robustas y escalables,
+          trabajando con diversas tecnologías y arquitecturas.
         </motion.p>
       </div>
       <div className='mt-20 flex flex-wrap gap-7'>

@@ -10,36 +10,39 @@ import {
   tripguide,
 } from "../assets";
 
+import progestion from "../assets/company/progestion.jpg";
+import hospital from "../assets/company/hospital.png";
+
 export const navLinks = [
   {
     id: "about",
-    title: "About",
+    title: "Sobre mí",
   },
   {
     id: "work",
-    title: "Work",
+    title: "Experiencia",
   },
   {
     id: "contact",
-    title: "Contact",
+    title: "Contacto",
   },
 ];
 
 const services = [
   {
-    title: "Full Stack Developer (PHP, JS)",
+    title: "Desarrollador Full Stack (PHP, JS)",
     icon: web,
   },
   {
-    title: "Backend Specialist (Node, NestJS, Laravel)",
+    title: "Especialista Backend (Node, NestJS, Laravel)",
     icon: backend,
   },
   {
-    title: "Critical Systems & ERP",
+    title: "Sistemas Críticos & ERP",
     icon: mobile,
   },
   {
-    title: "Cloud & DevOps Enthusiast",
+    title: "Cloud & DevOps",
     icon: web, // Using existing icon as placeholder
   },
 ];
@@ -48,9 +51,9 @@ const experiences = [
   {
     title: "Desarrollador Backend / Soporte de Sistemas",
     company_name: "Grupo Progestión",
-    icon: backend, // Placeholder icon
+    icon: progestion,
     iconBg: "#383E56",
-    date: "Aug 2025 - Present",
+    date: "Ago 2025 - Actualidad",
     points: [
       "Participé en la mantención, soporte y evolución de un sistema empresarial crítico en producción.",
       "Abordé incidencias técnicas, errores heredados y problemas de lógica de negocio en módulos utilizados diariamente.",
@@ -62,7 +65,7 @@ const experiences = [
   {
     title: "Desarrollador FullStack",
     company_name: "Hospital Roberto del Río",
-    icon: web, // Placeholder icon
+    icon: hospital,
     iconBg: "#E6DEDD",
     date: "Jun 2023 - Jul 2025",
     points: [
@@ -100,82 +103,80 @@ const experiences = [
     ],
   },
   {
-    title: "Web Developer",
+    title: "Desarrollador Web",
     company_name: "DevLef",
     icon: llano,
     iconBg: "#383E56",
     date: "Sep 2022 - Nov 2022",
     points: [
-      "Developing web application for PsicologosTemuco With Laravel and Mysql.",
-      "Collaborating with cross-functional teams.",
-      "Implementing responsive design.",
+      "Desarrollo de aplicación web para PsicologosTemuco con Laravel y MySQL.",
+      "Colaboración con equipos multifuncionales.",
+      "Implementación de diseño responsivo.",
     ],
   },
 ];
 
 const projects = [
   {
-    name: "WareHouse College",
+    name: "COR360 – Enterprise Microservices",
     description:
-      "Web-based platform that allows users to search materials, order the warehouse college, schedule important things and restocking.",
+      "Diseño y desarrollo de nueva arquitectura basada en microservicios para reemplazar sistema monolítico. NestJS, RabbitMQ, MongoDB/PostgreSQL, OpenSearch.",
     tags: [
-      {
-        name: "php",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "mysql",
-        color: "green-text-gradient",
-      },
-      {
-        name: "bootstrap",
-        color: "pink-text-gradient",
-      },
+      { name: "nestjs", color: "blue-text-gradient" },
+      { name: "microservices", color: "green-text-gradient" },
+      { name: "rabbitmq", color: "pink-text-gradient" },
+      { name: "docker", color: "blue-text-gradient" },
     ],
-    image: carrent,
-    source_code_link: "https://github.com/OMella96/Project-Bodega",
+    // No image for now, handling in component
+    source_code_link: "", // No public link
   },
   {
-    name: "Laravel Crud",
+    name: "BMS – Financial Management",
     description:
-      "Web application allow users to request appointments with a psychologist, as well as psychologists to manage their patients.",
+      "Mantenimiento y estabilización de plataforma monolítica crítica. Optimización SQL Server, refactor de código legacy y debug de SPs complejos.",
     tags: [
-      {
-        name: "laravel",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "php",
-        color: "green-text-gradient",
-      },
-      {
-        name: "bootstrap",
-        color: "pink-text-gradient",
-      },
+      { name: "codeigniter", color: "blue-text-gradient" },
+      { name: "sqlserver", color: "green-text-gradient" },
+      { name: "legacy", color: "pink-text-gradient" },
     ],
-    image: jobit,
-    source_code_link: "https://github.com/OMella96",
+    image: progestion,
+    source_code_link: "",
   },
   {
-    name: "Portal IA",
+    name: "Infection Control System",
     description:
-      "Portal about AI that allows the user to connect to a Node-created API to store data in MongoDB.",
+      "Sistema para gestión de pacientes infecciosos y aislamiento. Estandarización de registros, alertas clínicas y modelado de estados dinámicos.",
     tags: [
-      {
-        name: "node",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "express",
-        color: "green-text-gradient",
-      },
-      {
-        name: "angular",
-        color: "pink-text-gradient",
-      },
+      { name: "php", color: "blue-text-gradient" },
+      { name: "mysql", color: "green-text-gradient" },
+      { name: "ajax", color: "pink-text-gradient" },
     ],
-    image: tripguide,
-    source_code_link: "https://github.com/OMella96/PortalAI",
+    image: hospital,
+    source_code_link: "",
+  },
+  {
+    name: "Hospital Supply Chain",
+    description:
+      "Gestión de inventario y logística hospitalaria. Control de stock, QR, integración con Informix y optimización de llamadas masivas.",
+    tags: [
+      { name: "codeigniter", color: "blue-text-gradient" },
+      { name: "informix", color: "green-text-gradient" },
+      { name: "datatables", color: "pink-text-gradient" },
+    ],
+    image: hospital,
+    source_code_link: "",
+  },
+  {
+    name: "Emergency Triage Index",
+    description:
+      "Optimización de flujo de admisión en urgencias. Reducción de tiempos, autocompletado inteligente e integración con API Fonasa.",
+    tags: [
+      { name: "php", color: "blue-text-gradient" },
+      { name: "api-rest", color: "green-text-gradient" },
+      { name: "javascript", color: "pink-text-gradient" },
+    ],
+    image: hospital,
+    source_code_link: "",
   },
 ];
 
